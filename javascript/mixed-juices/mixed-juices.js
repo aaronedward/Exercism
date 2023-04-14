@@ -79,32 +79,8 @@ export function remainingOrders(timeLeft, orders) {
   //throw new Error('Please implement the remainingOrders function');
   //let remainingOrders = [];
   while (timeLeft>0 && orders.length>0) {
-    const order = orders.shift();
-    switch (order) {
-      case 'Pure Strawberry Joy':
-        timeLeft -= 0.5;
-        break;
-      
-      case 'Energizer':
-        timeLeft -= 1.5;
-        break;
-  
-      case 'Green Garden':
-        timeLeft -= 1.5;
-        break;
-      
-      case 'Tropical Island':
-        timeLeft -= 3;
-        break;
-  
-      case 'All or Nothing':
-        timeLeft -= 5;
-        break;
-  
-      default:
-        timeLeft -= 2.5;
-        break;
-    }
+    timeLeft -= timeToMixJuice(orders[0]);
+    orders.shift();
   }
   return orders;
 }
