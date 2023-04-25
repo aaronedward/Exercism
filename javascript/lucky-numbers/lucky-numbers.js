@@ -8,7 +8,11 @@
  * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {
-  throw new Error('Implement the twoSum function');
+  //throw new Error('Implement the twoSum function');
+  let joinedArrayOne = Number(array1.join(''));
+  let joinedArrayTwo = Number(array2.join(''));
+
+  return joinedArrayOne+joinedArrayTwo;
 }
 
 /**
@@ -19,6 +23,7 @@ export function twoSum(array1, array2) {
  */
 export function luckyNumber(value) {
   throw new Error('Implement the luckyNumber function');
+  
 }
 
 /**
