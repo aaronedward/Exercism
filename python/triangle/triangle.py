@@ -1,6 +1,7 @@
 def equilateral(sides):
     """
-
+    takes array with length of 3 as input and checks if it is a triangle, and furthermore whether it represents an
+    equilateral triangle
     :param sides:
     :return:
     """
@@ -9,7 +10,8 @@ def equilateral(sides):
 
 def isosceles(sides):
     """
-
+    takes array with length of 3 as input and checks if it is a triangle, and furthermore whether it represents an
+    isosceles triangle
     :param sides:
     :return:
     """
@@ -18,7 +20,8 @@ def isosceles(sides):
 
 def scalene(sides):
     """
-
+    takes array with length of 3 as input and checks if it is a triangle, and furthermore whether it represents a
+    scalene triangle
     :param sides:
     :return:
     """
@@ -27,7 +30,7 @@ def scalene(sides):
 
 def isTriangle(sides):
     """
-
+    takes array with length of 3 as input and checks that it represents a triangle
     :param sides:
     :return:
     """
