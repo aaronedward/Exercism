@@ -4,7 +4,7 @@ def steps(number):
     :param number:
     :return:
     """
-    if number <=0:
+    if number <= 0:
         raise ValueError("Only positive integers are allowed")
 
     count = 0
@@ -16,4 +16,3 @@ def steps(number):
             number = (3 * number) + 1
             count += 1
     return count
-
