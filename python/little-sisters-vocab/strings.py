@@ -8,7 +8,7 @@ def add_prefix_un(word):
     :return: str - of root word prepended with 'un'.
     """
 
-    pass
+    return 'un'+word
 
 
 def make_word_groups(vocab_words):
@@ -26,7 +26,10 @@ def make_word_groups(vocab_words):
     produces the following string: 'en :: enclose :: enjoy :: enlighten'.
     """
 
-    pass
+    prefix_word = vocab_words[0]
+    word_list = vocab_words[1:]
+
+    return prefix_word + ' :: '+' :: '.join(prefix_word+word for word in word_list)
 
 
 def remove_suffix_ness(word):
@@ -38,7 +41,11 @@ def remove_suffix_ness(word):
     For example: "heaviness" becomes "heavy", but "sadness" becomes "sad".
     """
 
-    pass
+    word_denessified = word[:-4]
+    if word_denessified[-1] == 'i':
+        return word_denessified[:-1]+'y'
+
+    return word_denessified
 
 
 def adjective_to_verb(sentence, index):
@@ -51,4 +58,9 @@ def adjective_to_verb(sentence, index):
     For example, ("It got dark as the sun set", 2) becomes "darken".
     """
 
-    pass
+    split_sentence = sentence.split()
+
+    if split_sentence[index][-1] == '.':
+        return split_sentence[index][:-1]+'en'
+
+    return split_sentence[index]+'en'
