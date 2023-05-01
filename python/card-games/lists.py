@@ -11,7 +11,7 @@ def get_rounds(number):
     :return: list - current round and the two that follow.
     """
 
-    pass
+    return [number, number + 1, number + 2]
 
 
 def concatenate_rounds(rounds_1, rounds_2):
@@ -22,7 +22,7 @@ def concatenate_rounds(rounds_1, rounds_2):
     :return: list - all rounds played.
     """
 
-    pass
+    return rounds_1 + rounds_2
 
 
 def list_contains_round(rounds, number):
@@ -33,7 +33,9 @@ def list_contains_round(rounds, number):
     :return: bool - was the round played?
     """
 
-    pass
+    if number in rounds:
+        return True
+    return False
 
 
 def card_average(hand):
@@ -42,8 +44,13 @@ def card_average(hand):
     :param hand: list - cards in hand.
     :return: float - average value of the cards in the hand.
     """
+    total = 0
+    average = 0
+    for x in hand:
+        total += x
+    average = total / len(hand)
 
-    pass
+    return average
 
 
 def approx_average_is_average(hand):
@@ -53,7 +60,12 @@ def approx_average_is_average(hand):
     :return: bool - does one of the approximate averages equal the `true average`?
     """
 
-    pass
+    true_average = card_average(hand)
+    middle_element = middle = len(hand)/2
+
+    if (hand[0]+hand[-1])/2 == true_average or middle_element == true_average:
+        return True
+    return False
 
 
 def average_even_is_average_odd(hand):
