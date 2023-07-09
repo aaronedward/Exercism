@@ -61,9 +61,9 @@ def approx_average_is_average(hand):
     """
 
     true_average = card_average(hand)
-    middle_element = middle = len(hand)/2
+    middle_element = hand[int(len(hand)/2)]
 
-    if (hand[0]+hand[-1])/2 == true_average or middle_element == true_average:
+    if ((hand[0]+hand[-1])/2 == true_average or middle_element == true_average) or ((hand[0]+hand[-1])/2 == true_average and middle_element == true_average):
         return True
     return False
 
@@ -75,7 +75,18 @@ def average_even_is_average_odd(hand):
     :return: bool - are even and odd averages equal?
     """
 
-    pass
+    odd = []
+    even = []
+    for number in hand:
+        if hand.index(number) % 2 == 0:
+            even.append(number)
+        else:
+            odd.append(number)
+    average_odd = card_average(odd)
+    average_even = card_average(even)
+    if average_odd == average_even:
+        return True
+    return False
 
 
 def maybe_double_last(hand):
@@ -85,4 +96,7 @@ def maybe_double_last(hand):
     :return: list - hand with Jacks (if present) value doubled.
     """
 
-    pass
+    if hand[-1] == 11:
+        hand[-1] = 22
+        return hand
+    return hand
