@@ -1,38 +1,48 @@
 """Functions for organizing and calculating student exam scores."""
 
 
-def round_scores(student_scores):
+def round_scores(student_scores: list):
     """Round all provided student scores.
 
     :param student_scores: list - float or int of student exam scores.
     :return: list - student scores *rounded* to nearest integer value.
     """
 
-    pass
+    for i, score in enumerate(student_scores):
+        student_scores[i] = round(score)
+    return student_scores
 
 
-def count_failed_students(student_scores):
+def count_failed_students(student_scores: list):
     """Count the number of failing students out of the group provided.
 
     :param student_scores: list - containing int student scores.
     :return: int - count of student scores at or below 40.
     """
+    fail_count = 0
 
-    pass
+    for score in student_scores:
+        if score <= 40:
+            fail_count += 1
+    return fail_count
 
 
-def above_threshold(student_scores, threshold):
+def above_threshold(student_scores: list, threshold: int):
     """Determine how many of the provided student scores were 'the best' based on the provided threshold.
 
     :param student_scores: list - of integer scores.
     :param threshold: int - threshold to cross to be the "best" score.
     :return: list - of integer scores that are at or above the "best" threshold.
     """
+    best_scores = []
 
-    pass
+    for score in student_scores:
+        if score >= threshold:
+            best_scores.append(score)
+    return best_scores
 
 
-def letter_grades(highest):
+def letter_grades(highest: int):
     """Create a list of grade thresholds based on the provided highest grade.
 
     :param highest: int - value of highest exam score.
