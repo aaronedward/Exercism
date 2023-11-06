@@ -5,4 +5,5 @@ use (
 	./go/cars-assemble
 	./go/lasagna
 	./go/weather-forecast
+	./go/welcome-to-tech-palace
 )
