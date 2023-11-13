@@ -42,8 +42,5 @@ func Drive(car Car) Car {
 func CanFinish(car Car, track Track) bool {
 	distanceMaximum := (car.battery / car.batteryDrain) * car.speed
 
-	if distanceMaximum < track.distance {
-		return false
-	}
-	return true
+	return distanceMaximum >= track.distance
 }
