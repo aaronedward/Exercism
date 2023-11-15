@@ -7,7 +7,7 @@ use (
 	./go/blackjack
 	./go/card-tricks
 	./go/cars-assemble
-	./go/lasagna
+	./go/lasagna-master
 	./go/need-for-speed
 	./go/party-robot
 	./go/vehicle-purchase
