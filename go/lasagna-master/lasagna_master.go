@@ -1,6 +1,5 @@
 package lasagna
 
-// TODO: define the 'PreparationTime()' function
 func PreparationTime(layers []string, prepTime int) int {
 	if prepTime == 0 {
 		return (2 * len(layers))
@@ -11,7 +10,26 @@ func PreparationTime(layers []string, prepTime int) int {
 
 // TODO: define the 'Quantities()' function
 
+func Quantities(layers []string) (int, float64) {
+	var noodleTotal = 0
+	var sauceTotal = 0.0
+
+	for i := 0; i < len(layers); i++ {
+		if layers[i] == "sauce" {
+			sauceTotal++
+		} else if layers[i] == "noodles" {
+			noodleTotal++
+		} else {
+			continue
+		}
+	}
+	return noodleTotal * 50, sauceTotal * 0.2
+}
+
 // TODO: define the 'AddSecretIngredient()' function
+func AddSecretIngredient([]string, []string) {
+	panic("")
+}
 
 // TODO: define the 'ScaleRecipe()' function
 
