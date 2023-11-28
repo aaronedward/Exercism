@@ -34,7 +34,11 @@ func AddSecretIngredient(friendList []string, myList []string) {
 
 // TODO: define the 'ScaleRecipe()' function
 func ScaleRecipe(amounts []float64, portions int) []float64 {
-	panic("")
+	out := make([]float64, len(amounts))
+	for i, v := range amounts {
+		out[i] = v * float64(portions) / 2
+	}
+	return out
 }
 
 // Your first steps could be to read through the tasks, and create
