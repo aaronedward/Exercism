@@ -9,6 +9,7 @@ use (
 	./go/card-tricks
 	./go/cars-assemble
 	./go/chessboard
+	./go/election-day
 	./go/gross-store
 	./go/interest-is-interesting
 	./go/lasagna-master
