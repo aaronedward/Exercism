@@ -10,6 +10,7 @@ use (
 	./go/cars-assemble
 	./go/chessboard
 	./go/election-day
+	./go/elons-toys
 	./go/gross-store
 	./go/interest-is-interesting
 	./go/lasagna-master
