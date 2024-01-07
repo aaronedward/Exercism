@@ -2,7 +2,10 @@ package logs
 
 // Application identifies the application emitting the given log.
 func Application(log string) string {
-	panic("Please implement the Application() function")
+	//panic("Please implement the Application() function")
+	for index, char := range log {
+
+	}
 }
 
 // Replace replaces all occurrences of old with new, returning the modified log
