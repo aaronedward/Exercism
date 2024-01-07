@@ -28,6 +28,6 @@ static class LogLine
         } 
         return "";
     }
-
-    public static string Reformat(string logLine) => $"{Message(logLine)} ({LogLevel(logLine)})";
+    
+    public static string Reformat(string logLine) => $"{Message(logLine)} ({LogLevel(logLine)})"; //string interpolation and expression-bodied method used here
 }
