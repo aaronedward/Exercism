@@ -2,11 +2,9 @@ using System;
 
 public static class LogAnalysis 
 {
-    // TODO: define the 'SubstringAfter()' extension method on the `string` type
     public static string SubstringAfter(this string str, string delim) => str.Substring(delim,str.Length-delim);
 
-    // TODO: define the 'SubstringBetween()' extension method on the `string` type
-    //public static string SubstringBetween(this string )
+    public static string SubstringBetween(this string str,string str1, string str2) => str.Substring(str.StartsWith(str1), str.EndsWith(str2));
     
     // TODO: define the 'Message()' extension method on the `string` type
 
