@@ -2,11 +2,11 @@ using System;
 
 public static class LogAnalysis 
 {
-    public static string SubstringAfter(this string str, string delim) => str.Substring(delim,str.Length-delim);
+    public static string SubstringAfter(this string str, string delim) => str.Substring(str.IndexOf(delim) + delim.Length);
 
-    public static string SubstringBetween(this string str,string str1, string str2) => str.Substring(str.StartsWith(str1), str.EndsWith(str2));
-    
-    // TODO: define the 'Message()' extension method on the `string` type
+    public static string SubstringBetween(this string str, string str1, string str2) => str.Substring(str.IndexOf(str1) + str1.Length, str.IndexOf(str2) - str.IndexOf(str1) - str1.Length);
 
-    // TODO: define the 'LogLevel()' extension method on the `string` type
+    public static string Message(this string str) => SubstringAfter(str,": ");
+
+    public static string LogLevel(this string str) => SubstringBetween(str, "[", "]");
 }
