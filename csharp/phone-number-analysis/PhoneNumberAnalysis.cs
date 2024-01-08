@@ -7,8 +7,5 @@ public static class PhoneNumber
         return (phoneNumber.Substring(0, 3).Contains("212"), phoneNumber.Substring(4, 3).Contains("555"), phoneNumber.Substring(8,4));
     }
 
-    public static bool IsFake((bool IsNewYork, bool IsFake, string LocalNumber) phoneNumberInfo)
-    {
-        return phoneNumberInfo.IsFake;
-    }
+    public static bool IsFake((bool IsNewYork, bool IsFake, string LocalNumber) phoneNumberInfo) => phoneNumberInfo.IsFake;
 }
