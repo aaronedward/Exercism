@@ -1,24 +1,24 @@
 using System;
 
-class RemoteControlCar
-{
-    public static RemoteControlCar Buy()
-    {
-        throw new NotImplementedException("Please implement the (static) RemoteControlCar.Buy() method");
-    }
+class RemoteControlCar{
 
-    public string DistanceDisplay()
-    {
-        throw new NotImplementedException("Please implement the RemoteControlCar.DistanceDisplay() method");
-    }
+    public int meters = 0;
+    public double battery = 100.0;
 
-    public string BatteryDisplay()
-    {
-        throw new NotImplementedException("Please implement the RemoteControlCar.BatteryDisplay() method");
-    }
+    public static RemoteControlCar Buy() => new RemoteControlCar();
+
+    public string DistanceDisplay() =>  "Driven "+meters+" meters";
+
+    public string BatteryDisplay() => (battery>0) ? "Battery at "+battery+"%" : "Battery empty";
 
     public void Drive()
     {
-        throw new NotImplementedException("Please implement the RemoteControlCar.Drive() method");
+        if (battery == 0)
+        {
+            return;
+        }
+
+        meters += 20;
+        battery -= 1;
     }
 }
