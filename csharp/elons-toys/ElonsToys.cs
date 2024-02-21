@@ -2,6 +2,7 @@ using System;
 
 class RemoteControlCar{
 
+    //should implement string interpolation for DisplayDistance and BatteryDisplay
     public int meters = 0;
     public double battery = 100.0;
 
