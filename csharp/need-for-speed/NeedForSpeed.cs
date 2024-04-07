@@ -10,10 +10,7 @@ class RemoteControlCar
 
     public bool BatteryDrained() => this.battery - batteryDrain < 0;
 
-    public int DistanceDriven()
-    {
-        return this.distance;
-    }
+    public int DistanceDriven() => this.distance;
 
     public void Drive()
     {
@@ -24,10 +21,7 @@ class RemoteControlCar
         }
     }
 
-    public static RemoteControlCar Nitro()
-    {
-        return new RemoteControlCar(50,4);
-    }
+    public static RemoteControlCar Nitro() => new RemoteControlCar(50,4);
 }
 
 class RaceTrack
